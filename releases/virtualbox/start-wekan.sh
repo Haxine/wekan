@@ -200,7 +200,16 @@
         # LOGOUT_ON_MINUTES : The number of minutes
         # example : LOGOUT_ON_MINUTES=55
         #- LOGOUT_ON_MINUTES=
-
+        #-------------------------------------------------------------------
+        # Enable Auth0.
+        #- AUTH0_ENABLED=true
+        # Auth0 Domain.
+        #- AUTH0_DOMAIN=example.eu.auth0.com
+        # Auth0 Client Id.
+        #- AUTH0_CLIENT_ID=abcde12345
+        # Auth0 Secret.
+        #- AUTH0_SECRET=54321abcde
+        #-------------------------------------------------------------------
 	node main.js & >> ~/repos/wekan.log
 	cd ~/repos
 #done

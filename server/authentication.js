@@ -63,7 +63,18 @@ Meteor.startup(() => {
   };
 
   if (Meteor.isServer) {
-    if(process.env.OAUTH2_CLIENT_ID !== '') {
+
+    if(process.env.AUTH0_ENABLED === 'true') {
+      ServiceConfiguration.configurations.upsert({service: 'auth0'}, {
+        $set: {
+          domain: process.env.AUTH0_DOMAIN,
+          clientId: process.env.AUTH0_CLIENT_ID,
+          secret: process.env.AUTH0_SECRET,
+        }
+      });
+    }
+
+    if(process.env.OAUTH2_ENABLED === 'true') {
 
       ServiceConfiguration.configurations.upsert( // eslint-disable-line no-undef
         { service: 'oidc' },

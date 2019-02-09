@@ -243,6 +243,19 @@ REM # LOGOUT_ON_MINUTES : The number of minutes
 REM # example : LOGOUT_ON_MINUTES=55
 REM SET LOGOUT_ON_MINUTES=
 
+REM ------------------------------------------------
+
+REM # Enable Auth0.
+REM SET AUTH0_ENABLED=true
+REM # Auth0 Domain.
+REM SET AUTH0_DOMAIN=example.eu.auth0.com
+REM # Auth0 Client Id.
+REM SET AUTH0_CLIENT_ID=abcde12345
+REM # Auth0 Secret.
+REM SET AUTH0_SECRET=54321abcde
+
+REM ------------------------------------------------
+
 cd .build\bundle
 node main.js
 cd ..\..
